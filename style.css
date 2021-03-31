@@ -7,15 +7,41 @@
 body {
   min-height: 100vh;
   background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .img {
-  width: 400px;
+  max-width: 600px;
+  order: -1;
 }
-
-.image-slider {
+.image-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 4rem;
+}
+
+.arrow-container {
+  margin-top: 4rem;
+}
+.btn {
+  background: transparent;
+  padding: 0 1rem;
+  margin-right: 2rem;
+  cursor: pointer;
+  border: none;
+
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: limegreen;
+  color: #fff;
+  transform: scale(1.1);
+}
+.arrow {
+  color: #fff;
+  font-size: 2rem;
 }
