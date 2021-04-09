@@ -18,17 +18,16 @@ const imagesArray = [
 
 let next = 0;
 
-(function () {
-  const image = document.createElement('img');
-  image.classList.add('img');
-  image.src = imagesArray[next];
-  imageContainer.appendChild(image);
-})();
+const image = document.createElement('img');
+btnLeft.disabled = true;
+image.classList.add('img');
+image.src = imagesArray[next];
+imageContainer.appendChild(image);
 
 const nextImage = function () {
   const getImage = document.querySelector('img');
   next++;
-  next = next % imagesArray.length;
+  console.log(next);
   getImage.src = imagesArray[next];
 
   if (next === 9) {
@@ -42,7 +41,7 @@ const nextImage = function () {
 const prevImage = function () {
   const getImage = document.querySelector('img');
   next--;
-  next = next % imagesArray.length;
+  console.log(next);
   getImage.src = imagesArray[next];
 
   if (next === 0) {
